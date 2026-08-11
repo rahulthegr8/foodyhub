@@ -1,1 +1,1861 @@
+<!DOCTYPE html>
+<!--
+  <!DOCTYPE html> browser ko batata hai ki hum HTML5 use kar rahe hain.
+-->
 
+<html lang="en">
+<!--
+  <html> poore HTML document ka root element hota hai.
+  lang="en" browser aur search engine ko language batata hai.
+-->
+
+<head>
+  <!--
+    <head> ke andar website ki settings, title,
+    fonts aur CSS links rakhe jaate hain.
+  -->
+
+  <meta charset="UTF-8" />
+
+  <!--
+    UTF-8 special characters aur different languages
+    ko properly show karne ke liye use hota hai.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    Viewport meta tag website ko mobile responsive banane mein help karta hai.
+    width=device-width ka matlab screen ke according width set hogi.
+  -->
+
+  <title>FoodyHub- Food Delivery</title>
+
+  <!--
+    <title> browser tab mein website ka naam show karta hai.
+  -->
+
+  <!-- Google Font Connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Manrope Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!--
+    Google Fonts se Manrope font load kiya gaya hai.
+    wght ka matlab font weight hota hai.
+    400 normal, 700 bold aur 800 extra bold hota hai.
+  -->
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!--
+    Font Awesome se hum location, cart, search aur user icons use karenge.
+  -->
+
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    Ye line index.html ko style.css file ke saath connect karti hai.
+  -->
+</head>
+
+<body>
+  <!--
+    <body> ke andar website ka visible content hota hai.
+  -->
+
+  <!-- =========================
+     NAVBAR START
+========================= -->
+
+<header class="main-header">
+
+  <nav class="navbar container">
+
+    <!-- =========================
+         LOGO SECTION
+    ========================== -->
+
+    <a href="#" class="brand">
+
+      <span class="brand-icon">
+        <i class="fa-solid fa-bowl-food"></i>
+      </span>
+
+      <span class="brand-name">
+        Foody<span>Hub</span>
+      </span>
+
+    </a>
+
+
+    <!-- =========================
+         LOCATION SECTION
+    ========================== -->
+
+    <button class="location-box" type="button">
+
+      <span class="location-icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </span>
+
+      <span class="location-content">
+
+        <small>Delivering to</small>
+
+        <strong>
+          Select location
+          <i class="fa-solid fa-chevron-down"></i>
+        </strong>
+
+      </span>
+
+    </button>
+
+
+    <!-- =========================
+         NAVIGATION LINKS
+    ========================== -->
+
+    <div class="nav-menu">
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#" class="nav-link active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#restaurants" class="nav-link">
+            Restaurants
+          </a>
+        </li>
+
+        <li>
+          <a href="#offers" class="nav-link offers-link">
+
+            Offers
+
+            <span class="offer-badge">
+              New
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="#help" class="nav-link">
+            Help
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <!-- =========================
+         RIGHT SIDE ACTIONS
+    ========================== -->
+
+    <div class="nav-actions">
+
+      <!-- Search -->
+      <button
+        class="icon-button"
+        type="button"
+        aria-label="Search"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+
+      <!-- Cart -->
+      <a
+        href="cart.html"
+        class="cart-button"
+        aria-label="Shopping cart"
+      >
+
+        <i class="fa-solid fa-bag-shopping"></i>
+
+        <span class="cart-count">
+          2
+        </span>
+
+      </a>
+
+
+      <!-- Login -->
+      <button
+        class="login-button"
+        type="button"
+      >
+
+        <span class="login-icon">
+          <i class="fa-regular fa-user"></i>
+        </span>
+
+        <span>Login</span>
+
+      </button>
+
+
+      <!-- Mobile Menu -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <i class="fa-solid fa-bars-staggered"></i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<!-- =========================
+     NAVBAR END
+========================= -->
+
+
+
+<!-- =========================
+     HERO SLIDER START
+========================= -->
+
+<section class="hero-section">
+
+  <!--
+    Ye slider ki main image hai.
+    Apni image ka correct path yahan dena.
+  -->
+  <img
+    src="assets/Images/slider.png"
+    alt="Food Delivery"
+    class="hero-slider-image"
+  >
+
+
+  <!--
+    Overlay image ke UPAR rahega.
+    Isi ke andar button center hoga.
+  -->
+  <div class="hero-overlay">
+
+    <a href="#restaurants" class="hero-button">
+
+      Explore Restaurants
+
+      <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     HERO SLIDER END
+========================= -->
+
+<!-- =========================
+     FOOD CATEGORIES START
+========================= -->
+
+<section class="categories-section" id="restaurants">
+
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="section-heading">
+
+      <div>
+        <span class="section-tag">
+          Our Menu
+        </span>
+
+        <h2>
+          What's on your mind?
+        </h2>
+
+        <p>
+          Explore your favourite food categories
+        </p>
+      </div>
+
+      <!-- View All -->
+      <a href="#" class="view-all">
+        View All
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         CATEGORY CARDS
+    ========================== -->
+
+    <div class="category-grid">
+
+
+      <!-- Pizza -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/pizza.png"
+            alt="Pizza"
+          >
+        </div>
+
+        <h3>Pizza</h3>
+
+        <span>120+ Items</span>
+
+      </a>
+
+
+      <!-- Burger -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/burger.png"
+            alt="Burger"
+          >
+        </div>
+
+        <h3>Burger</h3>
+
+        <span>80+ Items</span>
+
+      </a>
+
+
+      <!-- Biryani -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/biryani.png"
+            alt="Biryani"
+          >
+        </div>
+
+        <h3>Biryani</h3>
+
+        <span>90+ Items</span>
+
+      </a>
+
+
+      <!-- Chinese -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/chinese.png"
+            alt="Chinese Food"
+          >
+        </div>
+
+        <h3>Chinese</h3>
+
+        <span>70+ Items</span>
+
+      </a>
+
+
+      <!-- Dessert -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/dessert.png"
+            alt="Dessert"
+          >
+        </div>
+
+        <h3>Desserts</h3>
+
+        <span>60+ Items</span>
+
+      </a>
+
+
+      <!-- Healthy -->
+      <a href="#" class="category-card">
+
+        <div class="category-image">
+          <img
+            src="./assets/images/healthy.png"
+            alt="Healthy Food"
+          >
+        </div>
+
+        <h3>Healthy</h3>
+
+        <span>50+ Items</span>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     FOOD CATEGORIES END
+========================= -->
+
+<!-- =====================================================
+     POPULAR RESTAURANTS SECTION START
+===================================================== -->
+
+<section class="restaurants-section" id="restaurants-list">
+
+  <div class="container">
+
+    <!-- =========================
+         SECTION HEADING
+    ========================== -->
+
+    <div class="restaurant-heading">
+
+      <div class="restaurant-heading-left">
+
+        <!-- Small Tag -->
+        <span class="section-tag">
+          TOP RESTAURANTS
+        </span>
+
+        <!-- Main Heading -->
+        <h2>
+          Popular restaurants near you
+        </h2>
+
+        <!-- Description -->
+        <p>
+          Discover the most loved restaurants in your area
+        </p>
+
+      </div>
+
+
+      <!-- View All Link -->
+      <a href="#" class="view-all">
+
+        View All
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+    </div>
+
+
+    <!-- =================================================
+         RESTAURANT CARDS GRID
+    ================================================== -->
+
+    <div class="restaurant-grid">
+
+
+      <!-- ===============================================
+           RESTAURANT CARD 1
+      ================================================ -->
+
+      <article class="restaurant-card">
+
+        <!-- Restaurant Image -->
+        <div class="restaurant-image">
+
+          <img
+            src="./assets/images/restaurant-1.png"
+            alt="The Pizza House"
+          >
+
+          <!-- Discount Badge -->
+          <span class="discount-badge">
+            30% OFF
+          </span>
+
+          <!-- Favourite Button -->
+          <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add The Pizza House to favourites"
+          >
+
+            <i class="fa-regular fa-heart"></i>
+
+          </button>
+
+        </div>
+
+
+        <!-- Restaurant Information -->
+        <div class="restaurant-content">
+
+          <!-- Name + Rating -->
+          <div class="restaurant-title">
+
+            <h3>
+              The Pizza House
+            </h3>
+
+            <span class="restaurant-rating">
+
+              <i class="fa-solid fa-star"></i>
+
+              4.8
+
+            </span>
+
+          </div>
+
+
+          <!-- Food Type -->
+          <p class="restaurant-category">
+            Pizza • Italian • Fast Food
+          </p>
+
+
+          <!-- Delivery Information -->
+          <div class="restaurant-info">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              20-25 min
+            </span>
+
+            <span>
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              250 for two
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ===============================================
+           RESTAURANT CARD 2
+      ================================================ -->
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-image">
+
+          <img
+            src="./assets/images/restaurant-2.png"
+            alt="Burger Station"
+          >
+
+          <span class="discount-badge">
+            20% OFF
+          </span>
+
+          <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add Burger Station to favourites"
+          >
+
+            <i class="fa-regular fa-heart"></i>
+
+          </button>
+
+        </div>
+
+
+        <div class="restaurant-content">
+
+          <div class="restaurant-title">
+
+            <h3>
+              Burger Station
+            </h3>
+
+            <span class="restaurant-rating">
+
+              <i class="fa-solid fa-star"></i>
+
+              4.7
+
+            </span>
+
+          </div>
+
+
+          <p class="restaurant-category">
+            Burger • American • Fast Food
+          </p>
+
+
+          <div class="restaurant-info">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              15-20 min
+            </span>
+
+            <span>
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              300 for two
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ===============================================
+           RESTAURANT CARD 3
+      ================================================ -->
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-image">
+
+          <img
+            src="./assets/images/restaurant-3.png"
+            alt="Royal Biryani"
+          >
+
+          <span class="discount-badge">
+            40% OFF
+          </span>
+
+          <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add Royal Biryani to favourites"
+          >
+
+            <i class="fa-regular fa-heart"></i>
+
+          </button>
+
+        </div>
+
+
+        <div class="restaurant-content">
+
+          <div class="restaurant-title">
+
+            <h3>
+              Royal Biryani
+            </h3>
+
+            <span class="restaurant-rating">
+
+              <i class="fa-solid fa-star"></i>
+
+              4.9
+
+            </span>
+
+          </div>
+
+
+          <p class="restaurant-category">
+            Biryani • Mughlai • North Indian
+          </p>
+
+
+          <div class="restaurant-info">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              25-30 min
+            </span>
+
+            <span>
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              350 for two
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ===============================================
+           RESTAURANT CARD 4
+      ================================================ -->
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-image">
+
+          <img
+            src="./assets/images/restaurant-4.png"
+            alt="Wok & Bowl"
+          >
+
+          <span class="discount-badge">
+            25% OFF
+          </span>
+
+          <button
+            class="favorite-btn"
+            type="button"
+            aria-label="Add Wok and Bowl to favourites"
+          >
+
+            <i class="fa-regular fa-heart"></i>
+
+          </button>
+
+        </div>
+
+
+        <div class="restaurant-content">
+
+          <div class="restaurant-title">
+
+            <h3>
+              wok & Bowl
+            </h3>
+
+            <span class="restaurant-rating">
+
+              <i class="fa-solid fa-star"></i>
+
+              4.6
+
+            </span>
+
+          </div>
+
+
+          <p class="restaurant-category">
+            Chinese • Asian • Noodles
+          </p>
+
+
+          <div class="restaurant-info">
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              20-30 min
+            </span>
+
+            <span>
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              280 for two
+            </span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     POPULAR RESTAURANTS SECTION END
+===================================================== -->
+
+<!-- =====================================================
+     TRENDING DISHES SECTION START
+===================================================== -->
+
+<section class="trending-section">
+
+  <div class="container">
+
+    <!-- =========================
+         SECTION HEADING
+    ========================== -->
+
+    <div class="trending-heading">
+
+      <div>
+
+        <span class="section-tag">
+          TRENDING NOW
+        </span>
+
+        <h2>
+          Trending dishes
+        </h2>
+
+        <p>
+          Most ordered dishes people are loving right now
+        </p>
+
+      </div>
+
+
+      <!-- View All -->
+      <a href="#" class="view-all">
+
+        View All
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         DISH GRID
+    ========================== -->
+
+    <div class="dish-grid">
+
+
+      <!-- =========================
+           DISH CARD 1
+      ========================== -->
+
+      <article class="dish-card">
+
+        <div class="dish-image">
+
+          <img
+            src="./assets/images/dish-pizza.png"
+            alt="Cheese Burst Pizza"
+          >
+
+          <!-- Trending Badge -->
+          <span class="dish-badge">
+            Bestseller
+          </span>
+
+          <!-- Favourite -->
+          <button
+            class="dish-favorite"
+            type="button"
+            aria-label="Add pizza to favourites"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+        </div>
+
+
+        <div class="dish-content">
+
+          <div class="dish-top">
+
+            <div>
+              <h3>Cheese Burst Pizza</h3>
+
+              <p>Pizza House</p>
+            </div>
+
+
+            <span class="dish-rating">
+              <i class="fa-solid fa-star"></i>
+              4.8
+            </span>
+
+          </div>
+
+
+          <div class="dish-bottom">
+
+            <!-- Price -->
+            <div class="dish-price">
+
+              <strong>₹299</strong>
+
+              <del>₹399</del>
+
+            </div>
+
+
+            <!-- Add Button -->
+            <button class="add-dish-btn" type="button">
+
+              Add
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =========================
+           DISH CARD 2
+      ========================== -->
+
+      <article class="dish-card">
+
+        <div class="dish-image">
+
+          <img
+            src="./assets/images/dish-burger.jpg"
+            alt="Double Cheese Burger"
+          >
+
+          <span class="dish-badge">
+            Popular
+          </span>
+
+          <button
+            class="dish-favorite"
+            type="button"
+            aria-label="Add burger to favourites"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+        </div>
+
+
+        <div class="dish-content">
+
+          <div class="dish-top">
+
+            <div>
+              <h3>Double Cheese Burger</h3>
+
+              <p>Burger Station</p>
+            </div>
+
+
+            <span class="dish-rating">
+              <i class="fa-solid fa-star"></i>
+              4.7
+            </span>
+
+          </div>
+
+
+          <div class="dish-bottom">
+
+            <div class="dish-price">
+
+              <strong>₹199</strong>
+
+              <del>₹249</del>
+
+            </div>
+
+
+            <button class="add-dish-btn" type="button">
+
+              Add
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =========================
+           DISH CARD 3
+      ========================== -->
+
+      <article class="dish-card">
+
+        <div class="dish-image">
+
+          <img
+            src="./assets/images/dish-biryani.jpg"
+            alt="Chicken Biryani"
+          >
+
+          <span class="dish-badge">
+            Top Rated
+          </span>
+
+          <button
+            class="dish-favorite"
+            type="button"
+            aria-label="Add biryani to favourites"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+        </div>
+
+
+        <div class="dish-content">
+
+          <div class="dish-top">
+
+            <div>
+              <h3>Royal Chicken Biryani</h3>
+
+              <p>Royal Biryani</p>
+            </div>
+
+
+            <span class="dish-rating">
+              <i class="fa-solid fa-star"></i>
+              4.9
+            </span>
+
+          </div>
+
+
+          <div class="dish-bottom">
+
+            <div class="dish-price">
+
+              <strong>₹349</strong>
+
+              <del>₹449</del>
+
+            </div>
+
+
+            <button class="add-dish-btn" type="button">
+
+              Add
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =========================
+           DISH CARD 4
+      ========================== -->
+
+      <article class="dish-card">
+
+        <div class="dish-image">
+
+          <img
+            src="./assets/images/dish-noodles.jpg"
+            alt="Chilli Garlic Noodles"
+          >
+
+          <span class="dish-badge">
+            Hot
+          </span>
+
+          <button
+            class="dish-favorite"
+            type="button"
+            aria-label="Add noodles to favourites"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+        </div>
+
+
+        <div class="dish-content">
+
+          <div class="dish-top">
+
+            <div>
+              <h3>Chilli Garlic Noodles</h3>
+
+              <p>Wok & Bowl</p>
+            </div>
+
+
+            <span class="dish-rating">
+              <i class="fa-solid fa-star"></i>
+              4.6
+            </span>
+
+          </div>
+
+
+          <div class="dish-bottom">
+
+            <div class="dish-price">
+
+              <strong>₹229</strong>
+
+              <del>₹299</del>
+
+            </div>
+
+
+            <button class="add-dish-btn" type="button">
+
+              Add
+
+              <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     TRENDING DISHES SECTION END
+===================================================== -->
+
+<!-- =====================================================
+     SPECIAL OFFERS SECTION START
+===================================================== -->
+
+<section class="offers-section" id="offers">
+
+  <div class="container">
+
+    <!-- =========================
+         SECTION HEADING
+    ========================== -->
+
+    <div class="offers-heading">
+
+      <div>
+
+        <!-- Small Tag -->
+        <span class="section-tag">
+          SPECIAL DEALS
+        </span>
+
+        <!-- Main Heading -->
+        <h2>
+          Offers you can't resist
+        </h2>
+
+        <!-- Description -->
+        <p>
+          Delicious food at prices that make every bite better
+        </p>
+
+      </div>
+
+
+      <!-- View All -->
+      <a href="#" class="view-all">
+
+        View All Offers
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+      </a>
+
+    </div>
+
+
+    <!-- =================================================
+         OFFERS GRID
+    ================================================== -->
+
+    <div class="offers-grid">
+
+
+      <!-- ===============================================
+           OFFER CARD 1
+      ================================================ -->
+
+      <article class="offer-card offer-card-orange">
+
+        <!-- Offer Content -->
+        <div class="offer-content">
+
+          <!-- Small Badge -->
+          <span class="offer-label">
+            LIMITED TIME
+          </span>
+
+
+          <!-- Offer Heading -->
+          <h3>
+            Get <span>50% OFF</span>
+            on your first order
+          </h3>
+
+
+          <!-- Offer Description -->
+          <p>
+            Order your favourite meal and enjoy an amazing
+            discount on your first FoodyHub order.
+          </p>
+
+
+          <!-- Coupon Area -->
+          <div class="coupon-area">
+
+            <div class="coupon-code">
+
+              <small>
+                Use code
+              </small>
+
+              <strong>
+                FIRST50
+              </strong>
+
+            </div>
+
+
+            <!-- Order Button -->
+            <a href="#restaurants-list" class="offer-btn">
+
+              Order Now
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Offer Image -->
+        <div class="offer-image">
+
+          <img
+            src="./assets/images/offer-burger.png"
+            alt="Burger special offer"
+          >
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ===============================================
+           OFFER CARD 2
+      ================================================ -->
+
+      <article class="offer-card offer-card-dark">
+
+        <!-- Offer Content -->
+        <div class="offer-content">
+
+          <span class="offer-label">
+            FREE DELIVERY
+          </span>
+
+
+          <h3>
+            Free delivery
+            <span>all weekend</span>
+          </h3>
+
+
+          <p>
+            Enjoy your weekend favourites without paying
+            any delivery charges.
+          </p>
+
+
+          <!-- Coupon + Button -->
+          <div class="coupon-area">
+
+            <div class="coupon-code">
+
+              <small>
+                Use code
+              </small>
+
+              <strong>
+                WEEKEND
+              </strong>
+
+            </div>
+
+
+            <a href="#restaurants-list" class="offer-btn">
+
+              Explore Food
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- Pizza Image -->
+        <div class="offer-image">
+
+          <img
+            src="./assets/images/offer-pizza.png"
+            alt="Pizza free delivery offer"
+          >
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     SPECIAL OFFERS SECTION END
+===================================================== -->
+
+<!-- =====================================================
+     WHY CHOOSE FOODYHUB SECTION START
+===================================================== -->
+
+<section class="why-section">
+
+  <div class="container">
+
+    <!-- =========================
+         SECTION HEADING
+    ========================== -->
+
+    <div class="why-heading">
+
+      <span class="section-tag">
+        WHY FOODYHUB
+      </span>
+
+      <h2>
+        Why choose FoodyHub?
+      </h2>
+
+      <p>
+        We make food ordering simple, fast and reliable
+        from your favourite restaurants.
+      </p>
+
+    </div>
+
+
+    <!-- =========================
+         FEATURES GRID
+    ========================== -->
+
+    <div class="why-grid">
+
+
+      <!-- =========================
+           FEATURE 1
+      ========================== -->
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          <i class="fa-solid fa-bolt"></i>
+
+        </div>
+
+        <h3>
+          Fast Delivery
+        </h3>
+
+        <p>
+          Get your favourite food delivered quickly
+          with fast and reliable delivery service.
+        </p>
+
+      </article>
+
+
+      <!-- =========================
+           FEATURE 2
+      ========================== -->
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          <i class="fa-solid fa-leaf"></i>
+
+        </div>
+
+        <h3>
+          Fresh & Quality Food
+        </h3>
+
+        <p>
+          We connect you with trusted restaurants
+          serving fresh and quality meals.
+        </p>
+
+      </article>
+
+
+      <!-- =========================
+           FEATURE 3
+      ========================== -->
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+        </div>
+
+        <h3>
+          Live Order Tracking
+        </h3>
+
+        <p>
+          Track your food from restaurant preparation
+          to your doorstep in real time.
+        </p>
+
+      </article>
+
+
+      <!-- =========================
+           FEATURE 4
+      ========================== -->
+
+      <article class="why-card">
+
+        <div class="why-icon">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+        <h3>
+          Secure Payments
+        </h3>
+
+        <p>
+          Enjoy safe and secure payments with multiple
+          payment options for every order.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     WHY CHOOSE FOODYHUB SECTION END
+===================================================== -->
+
+
+<!-- =====================================================
+     APP DOWNLOAD SECTION START
+===================================================== -->
+
+<section class="app-section">
+
+  <div class="container app-container">
+
+    <!-- =========================
+         LEFT SIDE - MOBILE IMAGE
+    ========================== -->
+
+    <div class="app-image">
+
+      <!--
+        Yahan apni mobile/app screenshot image lagani hai.
+        Transparent PNG best rahegi.
+      -->
+
+      <img
+        src="./assets/images/foodyhub-app.png"
+        alt="FoodyHub mobile application"
+      >
+
+    </div>
+
+
+    <!-- =========================
+         RIGHT SIDE - CONTENT
+    ========================== -->
+
+    <div class="app-content">
+
+      <!-- Small Label -->
+      <span class="section-tag">
+        DOWNLOAD OUR APP
+      </span>
+
+
+      <!-- Main Heading -->
+      <h2>
+        Your favourite food,
+        <span>just one tap away.</span>
+      </h2>
+
+
+      <!-- Description -->
+      <p>
+        Download the FoodyHub app and discover your favourite
+        restaurants, exclusive offers and faster food delivery.
+      </p>
+
+
+      <!-- =========================
+           APP FEATURES
+      ========================== -->
+
+      <div class="app-features">
+
+        <span>
+          <i class="fa-solid fa-circle-check"></i>
+          Exclusive app offers
+        </span>
+
+        <span>
+          <i class="fa-solid fa-circle-check"></i>
+          Live order tracking
+        </span>
+
+        <span>
+          <i class="fa-solid fa-circle-check"></i>
+          Fast & easy ordering
+        </span>
+
+      </div>
+
+
+      <!-- =========================
+           DOWNLOAD BUTTONS
+      ========================== -->
+
+      <div class="app-download-buttons">
+
+        <!-- Google Play -->
+
+        <a href="#" class="store-button">
+
+          <img
+            src="./assets/images/google-play.png"
+            alt="Get it on Google Play"
+          >
+
+        </a>
+
+
+        <!-- App Store -->
+
+        <a href="#" class="store-button">
+
+          <img
+            src="./assets/images/app-store.png"
+            alt="Download on the App Store"
+          >
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     APP DOWNLOAD SECTION END
+===================================================== -->
+
+<!-- =====================================================
+     FOOTER SECTION START
+===================================================== -->
+
+<footer class="footer" id="help">
+
+  <div class="container">
+
+    <!-- =================================================
+         FOOTER MAIN CONTENT
+    ================================================== -->
+
+    <div class="footer-grid">
+
+
+      <!-- =========================
+           COLUMN 1 : BRAND
+      ========================== -->
+
+      <div class="footer-brand">
+
+        <!-- Logo -->
+        <a href="#" class="footer-logo">
+
+          <span class="footer-logo-icon">
+            <i class="fa-solid fa-bowl-food"></i>
+          </span>
+
+          <span class="footer-logo-name">
+            Foody<span>Hub</span>
+          </span>
+
+        </a>
+
+
+        <!-- Description -->
+        <p>
+          Delicious food from your favourite restaurants,
+          delivered fast and fresh right to your doorstep.
+        </p>
+
+
+        <!-- =========================
+             SOCIAL MEDIA
+        ========================== -->
+
+        <div class="footer-social">
+
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Youtube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           COLUMN 2 : COMPANY
+      ========================== -->
+
+      <div class="footer-column">
+
+        <h3>Company</h3>
+
+        <ul>
+
+          <li>
+            <a href="#">About Us</a>
+          </li>
+
+          <li>
+            <a href="#">Careers</a>
+          </li>
+
+          <li>
+            <a href="#">Blog</a>
+          </li>
+
+          <li>
+            <a href="#">Partner With Us</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           COLUMN 3 : QUICK LINKS
+      ========================== -->
+
+      <div class="footer-column">
+
+        <h3>Quick Links</h3>
+
+        <ul>
+
+          <li>
+            <a href="#">Home</a>
+          </li>
+
+          <li>
+            <a href="#restaurants-list">Restaurants</a>
+          </li>
+
+          <li>
+            <a href="#offers">Offers</a>
+          </li>
+
+          <li>
+            <a href="#">Trending Dishes</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           COLUMN 4 : SUPPORT
+      ========================== -->
+
+      <div class="footer-column">
+
+        <h3>Support</h3>
+
+        <ul>
+
+          <li>
+            <a href="#">Help Center</a>
+          </li>
+
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- =========================
+           COLUMN 5 : CONTACT
+      ========================== -->
+
+      <div class="footer-column footer-contact">
+
+        <h3>Get in touch</h3>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+
+          support@foodyhub.com
+        </p>
+
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+
+          +91 98765 43210
+        </p>
+
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+
+          India
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+         FOOTER DIVIDER
+    ================================================== -->
+
+    <div class="footer-divider"></div>
+
+
+    <!-- =================================================
+         FOOTER BOTTOM
+    ================================================== -->
+
+    <div class="footer-bottom">
+
+      <!-- Copyright -->
+
+      <p>
+        © 2026 FoodyHub. All rights reserved.
+      </p>
+
+
+      <!-- Developer Credit -->
+
+      <p class="developer-credit">
+
+        Designed & Developed with
+
+        <i class="fa-solid fa-heart"></i>
+
+        by
+
+        <a href="#">
+          Rahul Anand
+        </a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- =====================================================
+     FOOTER SECTION END
+===================================================== -->
