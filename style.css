@@ -4974,3 +4974,232 @@ img {
   }
 
 }
+
+/* =====================================================
+   FINAL MOBILE WIDTH FIX
+   Paste at END of style.css
+===================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .main-header {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    gap: 8px;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     DESKTOP NAV LINKS
+     COMPLETELY REMOVE ON MOBILE
+  ========================= */
+
+  .nav-menu {
+    display: none !important;
+    width: 0 !important;
+    max-width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+  }
+
+
+  .nav-links {
+    display: none !important;
+  }
+
+
+  /* =========================
+     NAV ACTIONS
+  ========================= */
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: auto;
+  }
+
+
+  .nav-actions .icon-button,
+  .nav-actions .cart-button,
+  .nav-actions .login-button {
+    display: none !important;
+  }
+
+
+  .menu-toggle {
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================
+     BRAND
+  ========================= */
+
+  .brand {
+    flex-shrink: 0;
+    min-width: 0;
+  }
+
+
+  .brand-name {
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     LOCATION
+  ========================= */
+
+  .location-box {
+    min-width: 0;
+    max-width: 145px;
+
+    flex-shrink: 1;
+
+    overflow: hidden;
+  }
+
+
+  .location-content {
+    min-width: 0;
+  }
+
+
+  .location-content strong {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+
+    white-space: nowrap;
+  }
+
+
+  /* =====================================================
+     ALL MAIN SECTIONS
+  ===================================================== */
+
+  main,
+  section,
+  footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  /* =====================================================
+     HERO
+  ===================================================== */
+
+  .hero-section {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  .hero-slider-image {
+    width: 100%;
+    max-width: 100%;
+
+    display: block;
+  }
+
+
+  /* =====================================================
+     GRID WIDTH FIX
+  ===================================================== */
+
+  .category-grid,
+  .restaurant-grid,
+  .dish-grid,
+  .offers-grid,
+  .why-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .category-card,
+  .restaurant-card,
+  .dish-card,
+  .offer-card,
+  .why-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+
+  /* =====================================================
+     IMAGES
+  ===================================================== */
+
+  img {
+    max-width: 100%;
+  }
+
+}
