@@ -4251,3 +4251,726 @@ a {
   }
 
 }
+
+/* =====================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Is code ko style.css ke BILKUL END me paste karo
+===================================================== */
+
+
+/* =========================
+   GLOBAL OVERFLOW FIX
+========================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/*
+  overflow-x: hidden;
+
+  Mobile par website ko left-right
+  slide hone se rokta hai.
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .container {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding-left: 18px;
+
+    padding-right: 18px;
+
+    margin: 0 auto;
+  }
+
+
+  /* =====================================================
+     NAVBAR
+  ===================================================== */
+
+  .main-header {
+    width: 100%;
+
+    background: #ffffff;
+  }
+
+
+  .navbar {
+    min-height: auto;
+
+    padding-top: 14px;
+
+    padding-bottom: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    flex-wrap: nowrap;
+  }
+
+
+  /* =========================
+     LOGO
+  ========================= */
+
+  .brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+  }
+
+
+  .brand-icon {
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 13px;
+  }
+
+
+  .brand-name {
+    font-size: 21px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     LOCATION
+  ========================= */
+
+  .location-box {
+    margin-left: auto;
+
+    padding: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    flex-shrink: 1;
+  }
+
+
+  .location-icon {
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+  }
+
+
+  .location-content small {
+    font-size: 9px;
+  }
+
+
+  .location-content strong {
+    font-size: 11px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     DESKTOP MENU HIDE
+  ========================= */
+
+  .nav-menu {
+    display: none;
+  }
+
+
+  /*
+    Tumhare screenshot me Home,
+    Restaurants etc right side bahar
+    nikal rahe the.
+
+    Mobile par unhe hide kar diya.
+  */
+
+
+  /* Desktop Actions Hide */
+
+  .nav-actions .icon-button,
+  .nav-actions .cart-button,
+  .nav-actions .login-button {
+    display: none;
+  }
+
+
+  /* =========================
+     HAMBURGER SHOW
+  ========================= */
+
+  .menu-toggle {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    font-size: 17px;
+
+    cursor: pointer;
+  }
+
+
+  .nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =====================================================
+     HERO / SLIDER
+  ===================================================== */
+
+  .hero-section {
+    position: relative;
+
+    width: 100%;
+
+    height: 470px;
+
+    overflow: hidden;
+
+    background: #fff7f3;
+  }
+
+
+  .hero-slider-image {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+
+    /*
+      Desktop banner bahut wide hai.
+
+      Mobile me right-side burger ko
+      visible rakhne ke liye position.
+    */
+
+    object-position: 58% center;
+  }
+
+
+  /* =========================
+     HERO OVERLAY
+  ========================= */
+
+  .hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    padding: 0 18px 35px;
+
+    background: transparent;
+  }
+
+
+  /* Hero Button */
+
+  .hero-button {
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    gap: 10px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =====================================================
+     SECTION COMMON FIX
+  ===================================================== */
+
+  .categories-section,
+  .restaurants-section,
+  .trending-section,
+  .offers-section,
+  .why-section,
+  .app-section {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* =====================================================
+     HEADINGS
+  ===================================================== */
+
+  .section-heading,
+  .restaurant-heading,
+  .trending-heading,
+  .offers-heading {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+  }
+
+
+  .section-heading h2,
+  .restaurant-heading h2,
+  .trending-heading h2,
+  .offers-heading h2,
+  .why-heading h2 {
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.2px;
+  }
+
+
+  /* =====================================================
+     FOOD CATEGORY
+  ===================================================== */
+
+  .category-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px 14px;
+  }
+
+
+  .category-card {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .category-image {
+    width: 115px;
+
+    height: 115px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .category-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+
+  /* =====================================================
+     RESTAURANTS
+  ===================================================== */
+
+  .restaurant-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 20px;
+  }
+
+
+  .restaurant-card {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .restaurant-image {
+    height: 220px;
+  }
+
+
+  /* =====================================================
+     TRENDING DISHES
+  ===================================================== */
+
+  .dish-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 20px;
+  }
+
+
+  .dish-card {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .dish-image {
+    height: 225px;
+  }
+
+
+  /* =====================================================
+     SPECIAL OFFERS
+  ===================================================== */
+
+  .offers-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 20px;
+  }
+
+
+  .offer-card {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 490px;
+
+    padding: 28px 22px;
+  }
+
+
+  .offer-content {
+    width: 100%;
+  }
+
+
+  .offer-content h3 {
+    font-size: 28px;
+
+    max-width: 100%;
+  }
+
+
+  .offer-image {
+    width: 72%;
+
+    max-width: 300px;
+
+    right: 50%;
+
+    bottom: -5px;
+
+    transform: translateX(50%);
+  }
+
+
+  /* =====================================================
+     WHY FOODYHUB
+  ===================================================== */
+
+  .why-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 18px;
+  }
+
+
+  .why-card {
+    width: 100%;
+  }
+
+
+  /* =====================================================
+     APP DOWNLOAD
+  ===================================================== */
+
+  .app-container {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 35px;
+
+    text-align: center;
+  }
+
+
+  .app-image {
+    width: 100%;
+
+    min-height: 330px;
+  }
+
+
+  .app-image::before {
+    width: 280px;
+
+    height: 280px;
+  }
+
+
+  .app-image img {
+    max-width: 245px;
+
+    margin: auto;
+  }
+
+
+  .app-content {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+
+  .app-content h2 {
+    font-size: 33px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  .app-features {
+    justify-content: center;
+  }
+
+
+  .app-download-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+
+  .store-button img {
+    width: 145px;
+
+    height: auto;
+  }
+
+
+  /* =====================================================
+     FOOTER
+  ===================================================== */
+
+  .footer {
+    width: 100%;
+
+    padding: 55px 0 25px;
+
+    overflow: hidden;
+  }
+
+
+  .footer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 38px;
+  }
+
+
+  .footer-brand,
+  .footer-column {
+    width: 100%;
+  }
+
+
+  .footer-brand > p {
+    max-width: 100%;
+  }
+
+
+  .footer-bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .container {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+
+  /* Logo thoda compact */
+
+  .brand-icon {
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .brand-name {
+    font-size: 18px;
+  }
+
+
+  /*
+    Extra small phone par
+    location ka "Delivering to"
+    hide kar dete hain.
+  */
+
+  .location-content small {
+    display: none;
+  }
+
+
+  .location-content strong {
+    font-size: 10px;
+  }
+
+
+  .location-icon {
+    width: 34px;
+
+    height: 34px;
+
+    min-width: 34px;
+  }
+
+
+  /* Hero */
+
+  .hero-section {
+    height: 430px;
+  }
+
+
+  .hero-slider-image {
+    object-position: 59% center;
+  }
+
+
+  /* Heading */
+
+  .section-heading h2,
+  .restaurant-heading h2,
+  .trending-heading h2,
+  .offers-heading h2,
+  .why-heading h2 {
+    font-size: 28px;
+  }
+
+
+  /* Food Images */
+
+  .category-image {
+    width: 100px;
+
+    height: 100px;
+  }
+
+}
